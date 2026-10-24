@@ -379,7 +379,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
         <article class="plan">
           <h3>Solo</h3>
           <p class="who-for" data-i18n="p1_for">Le vendeur seul dans sa boutique.</p>
-          <div class="price"><b data-m="149" data-y="1 490">149</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
+          <div class="price"><b data-plan="solo" data-m="149" data-y="1 490">149</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
           <ul>
             <li><svg><use href="#tick"/></svg><span data-i18n="p1_1">1 boutique, 1 compte</span></li>
             <li><svg><use href="#tick"/></svg><span data-i18n="p_all">Stock, IMEI, factures, WhatsApp</span></li>
@@ -391,7 +391,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
           <span class="badge" data-i18n="p_pop">Le plus choisi</span>
           <h3>Boutique</h3>
           <p class="who-for" data-i18n="p2_for">Une boutique avec son équipe.</p>
-          <div class="price"><b data-m="249" data-y="2 490">249</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
+          <div class="price"><b data-plan="boutique" data-m="249" data-y="2 490">249</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
           <ul>
             <li><svg><use href="#tick"/></svg><span data-i18n="p2_1">1 boutique, propriétaire + 3 employés</span></li>
             <li><svg><use href="#tick"/></svg><span data-i18n="p2_2">Marges cachées aux employés</span></li>
@@ -403,7 +403,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
         <article class="plan">
           <h3>Multi-boutique</h3>
           <p class="who-for" data-i18n="p3_for">Plusieurs points de vente, une seule vue.</p>
-          <div class="price"><b data-m="449" data-y="4 490">449</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
+          <div class="price"><b data-plan="multi" data-m="449" data-y="4 490">449</b><span class="per" data-i18n="per_m">MAD / mois</span></div>
           <ul>
             <li><svg><use href="#tick"/></svg><span data-i18n="p3_1">Jusqu'à 3 boutiques</span></li>
             <li><svg><use href="#tick"/></svg><span data-i18n="p3_2">Équipe dans chaque boutique</span></li>
@@ -461,7 +461,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
 
 <script>
 // WhatsApp number in international format, digits only (e.g. 212612345678).
-const WHATSAPP = "212600000000";
+let WHATSAPP = "212600000000";
 
 const T = {
 fr:{},
@@ -588,8 +588,26 @@ function render(){
   document.querySelectorAll(".price .per").forEach(s => { s.textContent = t(bill === "m" ? "per_m" : "per_y"); });
   document.querySelectorAll(".wa-link").forEach(a => { a.href = waHref(a.dataset.plan); });
 }
-const n = WHATSAPP.replace(/^212/, "");
-document.getElementById("wa-number").textContent = "+212 " + n.slice(0,1) + " " + n.slice(1).replace(/(\d\d)(?=\d)/g, "$1 ");
+function showNumber(){
+  const n = WHATSAPP.replace(/^212/, "");
+  document.getElementById("wa-number").textContent = "+212 " + n.slice(0,1) + " " + n.slice(1).replace(/(\d\d)(?=\d)/g, "$1 ");
+}
+showNumber();
+
+// site.json holds what Ilias edits from the admin (Pages CMS): number, prices, hours, licence text.
+function applySite(c){
+  if (c.whatsapp) WHATSAPP = String(c.whatsapp).replace(/\D/g, "");
+  const prix = c.prix || {};
+  document.querySelectorAll(".price b[data-plan]").forEach(b => {
+    const p = prix[b.dataset.plan] || {};
+    if (p.mois) b.dataset.m = p.mois;
+    if (p.an) b.dataset.y = p.an;
+  });
+  for (const [key, field] of [["c_small", "horaires"], ["n1_p", "licence"]]) {
+    for (const l of ["fr", "ar", "en"]) { const v = (c[field] || {})[l]; if (v) T[l][key] = v; }
+  }
+  showNumber(); render();
+}
 
 document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => {
   lang = b.dataset.lang; try { localStorage.setItem("okaisse-lang", lang); } catch (e) {}
@@ -598,6 +616,7 @@ document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click"
 document.querySelectorAll("[data-bill]").forEach(b => b.addEventListener("click", () => { bill = b.dataset.bill; render(); }));
 try { const saved = localStorage.getItem("okaisse-lang"); if (T[saved]) lang = saved; } catch (e) {}
 render();
+fetch("site.json", {cache: "no-store"}).then(r => r.ok ? r.json() : {}).then(applySite).catch(() => {});
 </script>
 </body>
 </html>

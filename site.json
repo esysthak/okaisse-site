@@ -1,0 +1,27 @@
+{
+  "whatsapp": "212600000000",
+  "prix": {
+    "solo": {
+      "mois": "149",
+      "an": "1 490"
+    },
+    "boutique": {
+      "mois": "249",
+      "an": "2 490"
+    },
+    "multi": {
+      "mois": "449",
+      "an": "4 490"
+    }
+  },
+  "horaires": {
+    "fr": "Lundi à samedi, 9 h à 19 h",
+    "ar": "من الإثنين إلى السبت، 9 صباحًا إلى 7 مساءً",
+    "en": "Monday to Saturday, 9 am to 7 pm"
+  },
+  "licence": {
+    "fr": "Payez une fois, à partir de 2 900 MAD, première année comprise (installation, formation, hébergement). Ensuite un service annuel à partir de 600 MAD.",
+    "ar": "ادفع مرة واحدة، ابتداءً من 2 900 درهم، مع السنة الأولى (التثبيت، التكوين، الاستضافة). بعدها خدمة سنوية ابتداءً من 600 درهم.",
+    "en": "Pay once, from 2,900 MAD, first year included (setup, training, hosting). Then a yearly service from 600 MAD."
+  }
+}

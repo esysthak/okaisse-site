@@ -1,0 +1,50 @@
+# Admin of the website: https://app.pagescms.org (sign in with GitHub).
+# Each field below edits site.json; saving publishes okaisse.com in about a minute.
+content:
+  - name: site
+    label: Réglages du site
+    type: file
+    path: site.json
+    format: json
+    fields:
+      - name: whatsapp
+        label: Numéro WhatsApp
+        description: "Format international, chiffres seulement. Exemple : 212612345678"
+        type: string
+        required: true
+      - name: prix
+        label: Prix (MAD)
+        type: object
+        fields:
+          - name: solo
+            label: Solo
+            type: object
+            fields:
+              - { name: mois, label: Par mois, type: string }
+              - { name: an, label: Par an, type: string }
+          - name: boutique
+            label: Boutique
+            type: object
+            fields:
+              - { name: mois, label: Par mois, type: string }
+              - { name: an, label: Par an, type: string }
+          - name: multi
+            label: Multi-boutique
+            type: object
+            fields:
+              - { name: mois, label: Par mois, type: string }
+              - { name: an, label: Par an, type: string }
+      - name: horaires
+        label: Horaires (sous le numéro)
+        type: object
+        fields:
+          - { name: fr, label: Français, type: string }
+          - { name: ar, label: Arabe, type: string }
+          - { name: en, label: Anglais, type: string }
+      - name: licence
+        label: Texte « Licence à vie »
+        type: object
+        fields:
+          - { name: fr, label: Français, type: text }
+          - { name: ar, label: Arabe, type: text }
+          - { name: en, label: Anglais, type: text }
