@@ -22,7 +22,7 @@ content:
         type: string
       - name: trial_url
         label: Lien des boutons « Essai gratuit »
-        description: "Page où une boutique crée son compte d'essai. Laisser vide = même lien que « Se connecter »."
+        description: "Page où une boutique crée son compte d'essai. Par défaut https://app.okaisse.com/?signup (ouvre directement « Créer ma boutique »)."
         type: string
       - name: image
         label: Capture d'écran (haut de page)
