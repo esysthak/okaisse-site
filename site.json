@@ -1,5 +1,6 @@
 {
   "whatsapp": "212600000000",
+  "app_url": "https://app.okaisse.com",
   "image": "images/app-screen.jpg",
   "prix": {
     "solo": {
@@ -36,6 +37,11 @@
         "fr": "Questions",
         "ar": "أسئلة",
         "en": "FAQ"
+      },
+      "nav_login": {
+        "fr": "Se connecter",
+        "ar": "تسجيل الدخول",
+        "en": "Log in"
       },
       "cta_short": {
         "fr": "Demander une démo",

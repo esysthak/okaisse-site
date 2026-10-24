@@ -16,6 +16,10 @@ content:
         description: "Format international, chiffres seulement. Exemple : 212612345678"
         type: string
         required: true
+      - name: app_url
+        label: Lien du bouton « Se connecter »
+        description: "Adresse de l'application pour les boutiques."
+        type: string
       - name: image
         label: Capture d'écran (haut de page)
         description: "Image large, idéalement 1280 x 800."
@@ -73,6 +77,13 @@ content:
                   - { name: en, label: Anglais, type: string }
               - name: nav_faq
                 label: "Menu : Questions"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: nav_login
+                label: "Bouton « Se connecter »"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }

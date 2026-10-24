@@ -227,6 +227,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
       <button id="lang-ar" type="button" data-lang="ar" aria-pressed="false">ع</button>
       <button id="lang-en" type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
+    <a class="btn btn-ghost" id="login" href="https://app.okaisse.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="nav_login">Se connecter</span></a>
     <a class="btn btn-wa wa-link" href="#contact" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span data-i18n="cta_short">Demander une démo</span></a>
   </div>
 </header>
@@ -467,7 +468,7 @@ const T = {
 fr:{},
 ar:{
 nav_features:"المميزات",nav_how:"كيف يعمل",nav_pricing:"الأسعار",nav_faq:"أسئلة",
-cta_short:"اطلب عرضًا",cta_main:"تجربة مجانية 14 يومًا",cta_pricing:"شاهد الأسعار",
+cta_short:"اطلب عرضًا",nav_login:"تسجيل الدخول",cta_main:"تجربة مجانية 14 يومًا",cta_pricing:"شاهد الأسعار",
 hero_eyebrow:"لمحلات الهواتف المستعملة",
 hero_title:"اشترِ، بِع، أصدر الفاتورة. <em>كل شيء OK.</em>",
 hero_lead:"يحفظ Okaisse كل هاتف تشتريه مع رقم IMEI وصوره وبائعه. تبيع بنقرتين، وتُرسل الفاتورة عبر واتساب، وترى ربح الشهر.",
@@ -516,7 +517,7 @@ wa_msg:"السلام عليكم، أريد تجربة Okaisse لمحلي.",wa_pl
 },
 en:{
 nav_features:"Features",nav_how:"How it works",nav_pricing:"Pricing",nav_faq:"FAQ",
-cta_short:"Ask for a demo",cta_main:"Free 14-day trial",cta_pricing:"See pricing",
+cta_short:"Ask for a demo",nav_login:"Log in",cta_main:"Free 14-day trial",cta_pricing:"See pricing",
 hero_eyebrow:"For used-phone shops",
 hero_title:"Buy, resell, invoice. <em>All OK.</em>",
 hero_lead:"Okaisse keeps every phone you buy, with its IMEI, photos and seller. You sell in two clicks, the invoice goes out on WhatsApp, and you see this month's profit.",
@@ -598,6 +599,7 @@ showNumber();
 function applySite(c){
   if (c.whatsapp) WHATSAPP = String(c.whatsapp).replace(/\D/g, "");
   if (c.image) document.getElementById("shot").src = c.image;
+  if (c.app_url) document.getElementById("login").href = c.app_url;
   const prix = c.prix || {};
   document.querySelectorAll(".price b[data-plan]").forEach(b => {
     const p = prix[b.dataset.plan] || {};
