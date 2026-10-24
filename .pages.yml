@@ -20,6 +20,10 @@ content:
         label: Lien du bouton « Se connecter »
         description: "Adresse de l'application pour les boutiques."
         type: string
+      - name: trial_url
+        label: Lien des boutons « Essai gratuit »
+        description: "Page où une boutique crée son compte d'essai. Laisser vide = même lien que « Se connecter »."
+        type: string
       - name: image
         label: Capture d'écran (haut de page)
         description: "Image large, idéalement 1280 x 800."
@@ -103,8 +107,15 @@ content:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
-              - name: cta_pricing
-                label: "Bouton « Voir les tarifs »"
+              - name: trial_note
+                label: "Petit texte sous le bouton d'essai"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: nav_top
+                label: "Points de navigation : Accueil"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
@@ -170,15 +181,57 @@ content:
                   - { name: fr, label: Français, type: text }
                   - { name: ar, label: Arabe, type: text }
                   - { name: en, label: Anglais, type: text }
-              - name: toast_t
-                label: "Bulle « Facture envoyée »"
+              - name: imei_ok
+                label: "Bulle IMEI"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
-              - name: imei_ok
-                label: "Bulle IMEI"
+              - name: sl1
+                label: "Diaporama : onglet 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: sl2
+                label: "Diaporama : onglet 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: sl3
+                label: "Diaporama : onglet 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: wa_bubble
+                label: "Diaporama : message WhatsApp"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: rep_rev
+                label: "Diaporama : « Chiffre d'affaires »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: rep_profit
+                label: "Diaporama : « Bénéfice »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: rep_margin
+                label: "Diaporama : « Marge »"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
