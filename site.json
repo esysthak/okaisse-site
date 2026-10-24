@@ -1,7 +1,7 @@
 {
   "whatsapp": "212600000000",
   "app_url": "https://app.okaisse.com",
-  "trial_url": "https://app.okaisse.com",
+  "trial_url": "https://app.okaisse.com/?signup",
   "image": "images/app-screen.jpg",
   "prix": {
     "solo": {
