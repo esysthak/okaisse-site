@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:title" content="Okaisse">
 <meta property="og:description" content="La caisse en ligne des boutiques de téléphones d'occasion au Maroc.">
-<meta property="og:image" content="app-screen.jpg">
+<meta property="og:image" content="images/app-screen.jpg">
 <title>Okaisse</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Okaisse : la caisse en ligne des boutiques de téléphones d'occasion au Maroc. Stock, IMEI, factures, WhatsApp, rapports.">
@@ -252,7 +252,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
       <div class="shot">
         <div class="frame">
           <div class="frame-bar"><i></i><i></i><i></i></div>
-          <img src="app-screen.jpg" width="1280" height="800" alt="Écran Okaisse : téléphones en stock, vendus ce mois et bénéfice du mois" data-i18n-alt="shot_alt">
+          <img id="shot" src="images/app-screen.jpg" width="1280" height="800" alt="Écran Okaisse : téléphones en stock, vendus ce mois et bénéfice du mois" data-i18n-alt="shot_alt">
         </div>
         <div class="float wa-toast" aria-hidden="true">
           <span class="ic"><svg style="color:#fff"><use href="#wa"/></svg></span>
@@ -594,17 +594,20 @@ function showNumber(){
 }
 showNumber();
 
-// site.json holds what Ilias edits from the admin (Pages CMS): number, prices, hours, licence text.
+// site.json holds what Ilias edits from the admin (Pages CMS): number, prices, picture and every text.
 function applySite(c){
   if (c.whatsapp) WHATSAPP = String(c.whatsapp).replace(/\D/g, "");
+  if (c.image) document.getElementById("shot").src = c.image;
   const prix = c.prix || {};
   document.querySelectorAll(".price b[data-plan]").forEach(b => {
     const p = prix[b.dataset.plan] || {};
     if (p.mois) b.dataset.m = p.mois;
     if (p.an) b.dataset.y = p.an;
   });
-  for (const [key, field] of [["c_small", "horaires"], ["n1_p", "licence"]]) {
-    for (const l of ["fr", "ar", "en"]) { const v = (c[field] || {})[l]; if (v) T[l][key] = v; }
+  for (const section of Object.values(c.textes || {})) {
+    for (const [key, v] of Object.entries(section)) {
+      for (const l of ["fr", "ar", "en"]) if (v && v[l]) T[l][key] = v[l];
+    }
   }
   showNumber(); render();
 }

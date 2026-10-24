@@ -1,5 +1,9 @@
 # Admin of the website: https://app.pagescms.org (sign in with GitHub).
 # Each field below edits site.json; saving publishes okaisse.com in about a minute.
+# Generated from the page texts; keep keys in sync with data-i18n in index.html.
+media:
+  input: images
+  output: images
 content:
   - name: site
     label: Réglages du site
@@ -12,6 +16,10 @@ content:
         description: "Format international, chiffres seulement. Exemple : 212612345678"
         type: string
         required: true
+      - name: image
+        label: Capture d'écran (haut de page)
+        description: "Image large, idéalement 1280 x 800."
+        type: image
       - name: prix
         label: Prix (MAD)
         type: object
@@ -34,17 +42,841 @@ content:
             fields:
               - { name: mois, label: Par mois, type: string }
               - { name: an, label: Par an, type: string }
-      - name: horaires
-        label: Horaires (sous le numéro)
+      - name: textes
+        label: Textes du site
         type: object
         fields:
-          - { name: fr, label: Français, type: string }
-          - { name: ar, label: Arabe, type: string }
-          - { name: en, label: Anglais, type: string }
-      - name: licence
-        label: Texte « Licence à vie »
-        type: object
-        fields:
-          - { name: fr, label: Français, type: text }
-          - { name: ar, label: Arabe, type: text }
-          - { name: en, label: Anglais, type: text }
+          - name: menu
+            label: "Menu et boutons"
+            type: object
+            fields:
+              - name: nav_features
+                label: "Menu : Fonctionnalités"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: nav_how
+                label: "Menu : Comment ça marche"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: nav_pricing
+                label: "Menu : Tarifs"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: nav_faq
+                label: "Menu : Questions"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: cta_short
+                label: "Bouton du menu"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: cta_main
+                label: "Bouton principal (essai)"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: cta_pricing
+                label: "Bouton « Voir les tarifs »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+          - name: accueil
+            label: "Haut de page"
+            type: object
+            fields:
+              - name: hero_eyebrow
+                label: "Petit texte au-dessus du titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: hero_title
+                label: "Titre principal (le texte entre <em> et </em> est en vert)"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: hero_lead
+                label: "Texte sous le titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: chip_1
+                label: "Étiquette 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: chip_2
+                label: "Étiquette 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: chip_3
+                label: "Étiquette 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: chip_4
+                label: "Étiquette 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: shot_alt
+                label: "Description de la capture (pour Google et les malvoyants)"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: toast_t
+                label: "Bulle « Facture envoyée »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: imei_ok
+                label: "Bulle IMEI"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+          - name: chiffres
+            label: "Bande des 3 points forts"
+            type: object
+            fields:
+              - name: who_1b
+                label: "Point 1 : en gras"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: who_1
+                label: "Point 1 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: who_2b
+                label: "Point 2 : en gras"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: who_2
+                label: "Point 2 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: who_3b
+                label: "Point 3 : en gras"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: who_3
+                label: "Point 3 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+          - name: fonctions
+            label: "Fonctionnalités"
+            type: object
+            fields:
+              - name: feat_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: feat_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f1_t
+                label: "Carte 1 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f1_p
+                label: "Carte 1 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f2_t
+                label: "Carte 2 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f2_p
+                label: "Carte 2 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f3_t
+                label: "Carte 3 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f3_p
+                label: "Carte 3 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f4_t
+                label: "Carte 4 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f4_p
+                label: "Carte 4 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f5_t
+                label: "Carte 5 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f5_p
+                label: "Carte 5 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f6_t
+                label: "Carte 6 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f6_p
+                label: "Carte 6 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f7_t
+                label: "Carte 7 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f7_p
+                label: "Carte 7 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f8_t
+                label: "Carte 8 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f8_p
+                label: "Carte 8 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: f9_t
+                label: "Carte 9 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: f9_p
+                label: "Carte 9 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+          - name: facture
+            label: "Partie facture"
+            type: object
+            fields:
+              - name: inv_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: inv_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: inv_lead
+                label: "Texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: inv_1
+                label: "Point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: inv_2
+                label: "Point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: inv_3
+                label: "Point 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: inv_4
+                label: "Point 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+          - name: etapes
+            label: "Comment ça marche"
+            type: object
+            fields:
+              - name: how_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: how_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: s1_t
+                label: "Étape 1 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: s1_p
+                label: "Étape 1 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: s2_t
+                label: "Étape 2 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: s2_p
+                label: "Étape 2 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: s3_t
+                label: "Étape 3 : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: s3_p
+                label: "Étape 3 : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: r1_t
+                label: "Gérant : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r1_tag
+                label: "Gérant : étiquette"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r1_1
+                label: "Gérant : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r1_2
+                label: "Gérant : point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r1_3
+                label: "Gérant : point 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r1_4
+                label: "Gérant : point 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_t
+                label: "Vendeurs : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_tag
+                label: "Vendeurs : étiquette"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_1
+                label: "Vendeurs : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_2
+                label: "Vendeurs : point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_3
+                label: "Vendeurs : point 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: r2_4
+                label: "Vendeurs : point 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+          - name: tarifs
+            label: "Tarifs (textes)"
+            type: object
+            fields:
+              - name: price_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: price_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: price_lead
+                label: "Texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: bill_m
+                label: "Bouton Mensuel"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: bill_y
+                label: "Bouton Annuel"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: bill_save
+                label: "Badge économie"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: per_m
+                label: "« MAD / mois »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: per_y
+                label: "« MAD / an »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p1_for
+                label: "Solo : pour qui"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p1_1
+                label: "Solo : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p_all
+                label: "Toutes les offres : point fonctions"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p_rep
+                label: "Toutes les offres : point rapports"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p_cta
+                label: "Bouton des offres"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p_pop
+                label: "Badge « le plus choisi »"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p2_for
+                label: "Boutique : pour qui"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p2_1
+                label: "Boutique : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p2_2
+                label: "Boutique : point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p3_for
+                label: "Multi-boutique : pour qui"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p3_1
+                label: "Multi-boutique : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p3_2
+                label: "Multi-boutique : point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: n1_t
+                label: "Licence à vie : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: n1_p
+                label: "Licence à vie : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: n2_t
+                label: "Paiement : titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: n2_p
+                label: "Paiement : texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+          - name: faq
+            label: "Questions fréquentes"
+            type: object
+            fields:
+              - name: faq_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: faq_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: q1
+                label: "Question 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: a1
+                label: "Réponse 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: q2
+                label: "Question 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: a2
+                label: "Réponse 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: q3
+                label: "Question 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: a3
+                label: "Réponse 3"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: q4
+                label: "Question 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: a4
+                label: "Réponse 4"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: q5
+                label: "Question 5"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: a5
+                label: "Réponse 5"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+          - name: contact
+            label: "Contact et bas de page"
+            type: object
+            fields:
+              - name: c_eyebrow
+                label: "Petit titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: c_title
+                label: "Titre"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: c_lead
+                label: "Texte"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: text }
+                  - { name: ar, label: Arabe, type: text }
+                  - { name: en, label: Anglais, type: text }
+              - name: c_btn
+                label: "Bouton WhatsApp"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: c_small
+                label: "Horaires"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: wa_msg
+                label: "Message WhatsApp pré-rempli"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: wa_plan
+                label: "Mot avant le nom de l'offre dans le message"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: foot
+                label: "Bas de page"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }

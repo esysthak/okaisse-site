@@ -1,5 +1,6 @@
 {
   "whatsapp": "212600000000",
+  "image": "images/app-screen.jpg",
   "prix": {
     "solo": {
       "mois": "149",
@@ -14,14 +15,594 @@
       "an": "4 490"
     }
   },
-  "horaires": {
-    "fr": "Lundi à samedi, 9 h à 19 h",
-    "ar": "من الإثنين إلى السبت، 9 صباحًا إلى 7 مساءً",
-    "en": "Monday to Saturday, 9 am to 7 pm"
-  },
-  "licence": {
-    "fr": "Payez une fois, à partir de 2 900 MAD, première année comprise (installation, formation, hébergement). Ensuite un service annuel à partir de 600 MAD.",
-    "ar": "ادفع مرة واحدة، ابتداءً من 2 900 درهم، مع السنة الأولى (التثبيت، التكوين، الاستضافة). بعدها خدمة سنوية ابتداءً من 600 درهم.",
-    "en": "Pay once, from 2,900 MAD, first year included (setup, training, hosting). Then a yearly service from 600 MAD."
+  "textes": {
+    "menu": {
+      "nav_features": {
+        "fr": "Fonctions",
+        "ar": "المميزات",
+        "en": "Features"
+      },
+      "nav_how": {
+        "fr": "Comment ça marche",
+        "ar": "كيف يعمل",
+        "en": "How it works"
+      },
+      "nav_pricing": {
+        "fr": "Tarifs",
+        "ar": "الأسعار",
+        "en": "Pricing"
+      },
+      "nav_faq": {
+        "fr": "Questions",
+        "ar": "أسئلة",
+        "en": "FAQ"
+      },
+      "cta_short": {
+        "fr": "Demander une démo",
+        "ar": "اطلب عرضًا",
+        "en": "Ask for a demo"
+      },
+      "cta_main": {
+        "fr": "Essai gratuit 14 jours",
+        "ar": "تجربة مجانية 14 يومًا",
+        "en": "Free 14-day trial"
+      },
+      "cta_pricing": {
+        "fr": "Voir les tarifs",
+        "ar": "شاهد الأسعار",
+        "en": "See pricing"
+      }
+    },
+    "accueil": {
+      "hero_eyebrow": {
+        "fr": "Pour les boutiques de téléphones d'occasion",
+        "ar": "لمحلات الهواتف المستعملة",
+        "en": "For used-phone shops"
+      },
+      "hero_title": {
+        "fr": "Achetez, revendez, facturez. <em>Tout est OK.</em>",
+        "ar": "اشترِ، بِع، أصدر الفاتورة. <em>كل شيء OK.</em>",
+        "en": "Buy, resell, invoice. <em>All OK.</em>"
+      },
+      "hero_lead": {
+        "fr": "Okaisse garde chaque téléphone que vous achetez, avec son IMEI, ses photos et son vendeur. Vous vendez en deux clics, la facture part sur WhatsApp, et vous voyez votre bénéfice du mois.",
+        "ar": "يحفظ Okaisse كل هاتف تشتريه مع رقم IMEI وصوره وبائعه. تبيع بنقرتين، وتُرسل الفاتورة عبر واتساب، وترى ربح الشهر.",
+        "en": "Okaisse keeps every phone you buy, with its IMEI, photos and seller. You sell in two clicks, the invoice goes out on WhatsApp, and you see this month's profit."
+      },
+      "chip_1": {
+        "fr": "Ordinateur et téléphone",
+        "ar": "حاسوب وهاتف",
+        "en": "Computer and phone"
+      },
+      "chip_2": {
+        "fr": "Français · العربية · English",
+        "ar": "Français · العربية · English",
+        "en": "Français · العربية · English"
+      },
+      "chip_3": {
+        "fr": "Prix en MAD",
+        "ar": "الأسعار بالدرهم",
+        "en": "Prices in MAD"
+      },
+      "chip_4": {
+        "fr": "Rien à installer",
+        "ar": "لا شيء للتثبيت",
+        "en": "Nothing to install"
+      },
+      "shot_alt": {
+        "fr": "Écran Okaisse : téléphones en stock, vendus ce mois et bénéfice du mois",
+        "ar": "شاشة Okaisse: الهواتف في المخزون والمبيعات وربح الشهر",
+        "en": "Okaisse screen: phones in stock, sold this month and monthly profit"
+      },
+      "toast_t": {
+        "fr": "Facture N° 0004 envoyée",
+        "ar": "أُرسلت الفاتورة رقم 0004",
+        "en": "Invoice No. 0004 sent"
+      },
+      "imei_ok": {
+        "fr": "15 chiffres · clé de contrôle valide · pas déjà en stock",
+        "ar": "15 رقمًا · رقم التحقق صحيح · غير موجود في المخزون",
+        "en": "15 digits · valid check digit · not already in stock"
+      }
+    },
+    "chiffres": {
+      "who_1b": {
+        "fr": "1 appli",
+        "ar": "تطبيق واحد",
+        "en": "1 app"
+      },
+      "who_1": {
+        "fr": "pour le stock, les ventes, les factures et les fournisseurs",
+        "ar": "للمخزون والمبيعات والفواتير والموردين",
+        "en": "for stock, sales, invoices and suppliers"
+      },
+      "who_2b": {
+        "fr": "Chaque boutique à part",
+        "ar": "كل محل على حدة",
+        "en": "Every shop on its own"
+      },
+      "who_2": {
+        "fr": "vos données ne sont visibles que par votre équipe",
+        "ar": "بياناتك لا يراها إلا فريقك",
+        "en": "only your team can see your data"
+      },
+      "who_3b": {
+        "fr": "Demain, tout commerce",
+        "ar": "غدًا، كل تجارة",
+        "en": "Tomorrow, any business"
+      },
+      "who_3": {
+        "fr": "Okaisse grandit vers une caisse pour tous les magasins",
+        "ar": "Okaisse يكبر ليصبح صندوقًا لكل المحلات",
+        "en": "Okaisse is growing into a till for every shop"
+      }
+    },
+    "fonctions": {
+      "feat_eyebrow": {
+        "fr": "Fonctions",
+        "ar": "المميزات",
+        "en": "Features"
+      },
+      "feat_title": {
+        "fr": "Tout ce qu'une boutique d'occasion fait chaque jour",
+        "ar": "كل ما يقوم به محل الهواتف المستعملة كل يوم",
+        "en": "Everything a used-phone shop does every day"
+      },
+      "f1_t": {
+        "fr": "Stock avec photos",
+        "ar": "مخزون بالصور",
+        "en": "Stock with photos"
+      },
+      "f1_p": {
+        "fr": "Jusqu'à 8 photos par téléphone, marque, modèle, stockage, couleur, état, batterie et prix.",
+        "ar": "حتى 8 صور لكل هاتف، العلامة والطراز والسعة واللون والحالة والبطارية والسعر.",
+        "en": "Up to 8 photos per phone, brand, model, storage, colour, condition, battery and price."
+      },
+      "f2_t": {
+        "fr": "IMEI scanné et vérifié",
+        "ar": "IMEI ممسوح ومُتحقق منه",
+        "en": "IMEI scanned and checked"
+      },
+      "f2_p": {
+        "fr": "Scannez la boîte ou l'écran *#06# avec la caméra. Okaisse vérifie les 15 chiffres et refuse un IMEI déjà en stock.",
+        "ar": "امسح العلبة أو شاشة ‎*#06#‎ بالكاميرا. يتحقق Okaisse من الأرقام الـ15 ويرفض IMEI موجودًا في المخزون.",
+        "en": "Scan the box or the *#06# screen with the camera. Okaisse checks the 15 digits and refuses an IMEI already in stock."
+      },
+      "f3_t": {
+        "fr": "Facture A4 numérotée",
+        "ar": "فاتورة A4 مرقمة",
+        "en": "Numbered A4 invoice"
+      },
+      "f3_p": {
+        "fr": "Votre logo, votre ICE, la garantie et vos notes. Imprimez, enregistrez en PDF ou envoyez sur WhatsApp.",
+        "ar": "شعارك ورقم ICE والضمان وملاحظاتك. اطبع أو احفظ PDF أو أرسل عبر واتساب.",
+        "en": "Your logo, your ICE, the warranty and your notes. Print it, save it as PDF or send it on WhatsApp."
+      },
+      "f4_t": {
+        "fr": "Vendeurs et fournisseurs",
+        "ar": "البائعون والموردون",
+        "en": "Sellers and suppliers"
+      },
+      "f4_p": {
+        "fr": "Qui vous a vendu chaque téléphone (nom, CIN, téléphone), et la liste de vos fournisseurs avec boutons Appeler et WhatsApp.",
+        "ar": "من باعك كل هاتف (الاسم، البطاقة الوطنية، الهاتف)، ولائحة مورديك مع زري الاتصال وواتساب.",
+        "en": "Who sold you each phone (name, ID card, phone), and your supplier list with Call and WhatsApp buttons."
+      },
+      "f5_t": {
+        "fr": "Votre équipe, vos marges cachées",
+        "ar": "فريقك، وأرباحك مخفية",
+        "en": "Your team, your margins hidden"
+      },
+      "f5_p": {
+        "fr": "Vos employés ajoutent et vendent, mais ne voient jamais vos prix d'achat ni votre bénéfice.",
+        "ar": "يضيف موظفوك ويبيعون، لكنهم لا يرون أبدًا ثمن الشراء ولا الربح.",
+        "en": "Your staff add and sell phones, but never see your purchase prices or your profit."
+      },
+      "f6_t": {
+        "fr": "Rapports clairs",
+        "ar": "تقارير واضحة",
+        "en": "Clear reports"
+      },
+      "f6_p": {
+        "fr": "Aujourd'hui, ce mois, cette année : ventes, chiffre d'affaires, bénéfice, marge, par vendeur, marque et fournisseur.",
+        "ar": "اليوم، هذا الشهر، هذه السنة: المبيعات، رقم المعاملات، الربح، الهامش، حسب البائع والعلامة والمورد.",
+        "en": "Today, this month, this year: sales, revenue, profit and margin, by staff member, brand and supplier."
+      },
+      "f7_t": {
+        "fr": "Recherche instantanée",
+        "ar": "بحث فوري",
+        "en": "Instant search"
+      },
+      "f7_p": {
+        "fr": "Retrouvez un téléphone par modèle, IMEI, client, vendeur, CIN ou numéro de facture.",
+        "ar": "اعثر على هاتف بالطراز أو IMEI أو الزبون أو البائع أو البطاقة الوطنية أو رقم الفاتورة.",
+        "en": "Find a phone by model, IMEI, client, seller, ID card or invoice number."
+      },
+      "f8_t": {
+        "fr": "Sauvegarde chaque jour",
+        "ar": "نسخة احتياطية كل يوم",
+        "en": "Backed up every day"
+      },
+      "f8_p": {
+        "fr": "Une copie complète de vos données tous les jours, 30 jours gardés. Vous pouvez aussi télécharger votre copie.",
+        "ar": "نسخة كاملة من بياناتك يوميًا، مع حفظ 30 يومًا. يمكنك أيضًا تنزيل نسختك.",
+        "en": "A full copy of your data every day, 30 days kept. You can download your own copy too."
+      },
+      "f9_t": {
+        "fr": "Comme une vraie appli",
+        "ar": "مثل تطبيق حقيقي",
+        "en": "Feels like a real app"
+      },
+      "f9_p": {
+        "fr": "S'installe sur l'écran d'accueil d'Android et d'iPhone, et marche aussi sur l'ordinateur de la boutique.",
+        "ar": "يُثبت على الشاشة الرئيسية لأندرويد وآيفون، ويعمل أيضًا على حاسوب المحل.",
+        "en": "Installs on the Android and iPhone home screen, and also works on the shop computer."
+      }
+    },
+    "facture": {
+      "inv_eyebrow": {
+        "fr": "La vente",
+        "ar": "البيع",
+        "en": "The sale"
+      },
+      "inv_title": {
+        "fr": "Le client repart avec sa facture sur WhatsApp",
+        "ar": "يغادر الزبون وفاتورته على واتساب",
+        "en": "The client leaves with the invoice on WhatsApp"
+      },
+      "inv_lead": {
+        "fr": "Entrez le client, le prix et le mode de paiement. Okaisse fait la facture et ouvre la discussion WhatsApp du client avec le PDF.",
+        "ar": "أدخل الزبون والسعر وطريقة الدفع. يُعد Okaisse الفاتورة ويفتح محادثة واتساب الزبون مع ملف PDF.",
+        "en": "Enter the client, the price and the payment method. Okaisse makes the invoice and opens the client's WhatsApp chat with the PDF."
+      },
+      "inv_1": {
+        "fr": "Numéros de facture suivis, boutique par boutique",
+        "ar": "أرقام فواتير متسلسلة لكل محل",
+        "en": "Invoice numbers tracked, shop by shop"
+      },
+      "inv_2": {
+        "fr": "Garantie par défaut « 3 mois », modifiable",
+        "ar": "ضمان افتراضي «3 أشهر» قابل للتعديل",
+        "en": "Default warranty \"3 months\", editable"
+      },
+      "inv_3": {
+        "fr": "Facture en français, en arabe ou en anglais",
+        "ar": "الفاتورة بالفرنسية أو العربية أو الإنجليزية",
+        "en": "Invoice in French, Arabic or English"
+      },
+      "inv_4": {
+        "fr": "Vente annulée : le téléphone revient en stock, la facture reste marquée ANNULÉE",
+        "ar": "إلغاء البيع: يعود الهاتف إلى المخزون وتبقى الفاتورة بعلامة «ملغاة»",
+        "en": "Cancelled sale: the phone goes back in stock and the invoice stays, marked CANCELLED"
+      }
+    },
+    "etapes": {
+      "how_eyebrow": {
+        "fr": "Comment ça marche",
+        "ar": "كيف يعمل",
+        "en": "How it works"
+      },
+      "how_title": {
+        "fr": "Votre boutique prête en une journée",
+        "ar": "محلك جاهز في يوم واحد",
+        "en": "Your shop ready in one day"
+      },
+      "s1_t": {
+        "fr": "On crée votre boutique",
+        "ar": "ننشئ محلك",
+        "en": "We set up your shop"
+      },
+      "s1_p": {
+        "fr": "Écrivez-nous sur WhatsApp. On ouvre votre compte avec votre logo, votre ICE et vos réglages de facture.",
+        "ar": "راسلنا على واتساب. نفتح حسابك بشعارك ورقم ICE وإعدادات فاتورتك.",
+        "en": "Message us on WhatsApp. We open your account with your logo, your ICE and your invoice settings."
+      },
+      "s2_t": {
+        "fr": "Vous ajoutez vos téléphones",
+        "ar": "تضيف هواتفك",
+        "en": "You add your phones"
+      },
+      "s2_p": {
+        "fr": "Scannez l'IMEI, prenez les photos, notez le prix d'achat. Vos employés ont chacun leur compte.",
+        "ar": "امسح IMEI، التقط الصور، سجّل ثمن الشراء. لكل موظف حسابه.",
+        "en": "Scan the IMEI, take the photos, note the purchase price. Each staff member gets their own account."
+      },
+      "s3_t": {
+        "fr": "Vous vendez et suivez",
+        "ar": "تبيع وتتابع",
+        "en": "You sell and track"
+      },
+      "s3_p": {
+        "fr": "Chaque vente fait sa facture. Vos rapports montrent ce que vous gagnez, jour après jour.",
+        "ar": "كل بيع يصدر فاتورته. تُظهر تقاريرك ما تربحه يومًا بعد يوم.",
+        "en": "Every sale makes its invoice. Your reports show what you earn, day after day."
+      },
+      "r1_t": {
+        "fr": "Le propriétaire",
+        "ar": "صاحب المحل",
+        "en": "The owner"
+      },
+      "r1_tag": {
+        "fr": "voit tout",
+        "ar": "يرى كل شيء",
+        "en": "sees everything"
+      },
+      "r1_1": {
+        "fr": "Prix d'achat, bénéfice et marge",
+        "ar": "ثمن الشراء والربح والهامش",
+        "en": "Purchase prices, profit and margin"
+      },
+      "r1_2": {
+        "fr": "Rapports et valeur du stock",
+        "ar": "التقارير وقيمة المخزون",
+        "en": "Reports and stock value"
+      },
+      "r1_3": {
+        "fr": "Comptes de l'équipe et réglages",
+        "ar": "حسابات الفريق والإعدادات",
+        "en": "Team accounts and settings"
+      },
+      "r1_4": {
+        "fr": "Annuler une vente",
+        "ar": "إلغاء عملية بيع",
+        "en": "Cancel a sale"
+      },
+      "r2_t": {
+        "fr": "Les employés",
+        "ar": "الموظفون",
+        "en": "The staff"
+      },
+      "r2_tag": {
+        "fr": "vendent",
+        "ar": "يبيعون",
+        "en": "sell"
+      },
+      "r2_1": {
+        "fr": "Ajouter et vendre des téléphones",
+        "ar": "إضافة الهواتف وبيعها",
+        "en": "Add and sell phones"
+      },
+      "r2_2": {
+        "fr": "Faire et envoyer les factures",
+        "ar": "إعداد الفواتير وإرسالها",
+        "en": "Make and send invoices"
+      },
+      "r2_3": {
+        "fr": "Ne voient pas les prix d'achat",
+        "ar": "لا يرون ثمن الشراء",
+        "en": "Don't see purchase prices"
+      },
+      "r2_4": {
+        "fr": "Ne voient pas le bénéfice",
+        "ar": "لا يرون الربح",
+        "en": "Don't see the profit"
+      }
+    },
+    "tarifs": {
+      "price_eyebrow": {
+        "fr": "Tarifs",
+        "ar": "الأسعار",
+        "en": "Pricing"
+      },
+      "price_title": {
+        "fr": "Un prix simple, 14 jours d'essai gratuit",
+        "ar": "سعر بسيط، و14 يومًا تجربة مجانية",
+        "en": "Simple pricing, 14-day free trial"
+      },
+      "price_lead": {
+        "fr": "Sans engagement. Hébergement, mises à jour et assistance compris.",
+        "ar": "بدون التزام. الاستضافة والتحديثات والمساعدة مشمولة.",
+        "en": "No commitment. Hosting, updates and support included."
+      },
+      "bill_m": {
+        "fr": "Mensuel",
+        "ar": "شهري",
+        "en": "Monthly"
+      },
+      "bill_y": {
+        "fr": "Annuel",
+        "ar": "سنوي",
+        "en": "Yearly"
+      },
+      "bill_save": {
+        "fr": "2 mois offerts",
+        "ar": "شهران مجانًا",
+        "en": "2 months free"
+      },
+      "per_m": {
+        "fr": "MAD / mois",
+        "ar": "درهم / شهر",
+        "en": "MAD / month"
+      },
+      "per_y": {
+        "fr": "MAD / an",
+        "ar": "درهم / سنة",
+        "en": "MAD / year"
+      },
+      "p1_for": {
+        "fr": "Le vendeur seul dans sa boutique.",
+        "ar": "البائع وحده في محله.",
+        "en": "The seller running the shop alone."
+      },
+      "p1_1": {
+        "fr": "1 boutique, 1 compte",
+        "ar": "محل واحد، حساب واحد",
+        "en": "1 shop, 1 account"
+      },
+      "p_all": {
+        "fr": "Stock, IMEI, factures, WhatsApp",
+        "ar": "المخزون، IMEI، الفواتير، واتساب",
+        "en": "Stock, IMEI, invoices, WhatsApp"
+      },
+      "p_rep": {
+        "fr": "Rapports et sauvegarde quotidienne",
+        "ar": "التقارير والنسخ الاحتياطي اليومي",
+        "en": "Reports and daily backup"
+      },
+      "p_cta": {
+        "fr": "Commencer l'essai",
+        "ar": "ابدأ التجربة",
+        "en": "Start the trial"
+      },
+      "p_pop": {
+        "fr": "Le plus choisi",
+        "ar": "الأكثر اختيارًا",
+        "en": "Most chosen"
+      },
+      "p2_for": {
+        "fr": "Une boutique avec son équipe.",
+        "ar": "محل مع فريقه.",
+        "en": "A shop with its team."
+      },
+      "p2_1": {
+        "fr": "1 boutique, propriétaire + 3 employés",
+        "ar": "محل واحد، المالك + 3 موظفين",
+        "en": "1 shop, owner + 3 staff"
+      },
+      "p2_2": {
+        "fr": "Marges cachées aux employés",
+        "ar": "الأرباح مخفية عن الموظفين",
+        "en": "Margins hidden from staff"
+      },
+      "p3_for": {
+        "fr": "Plusieurs points de vente, une seule vue.",
+        "ar": "عدة نقاط بيع، ونظرة واحدة.",
+        "en": "Several shops, one view."
+      },
+      "p3_1": {
+        "fr": "Jusqu'à 3 boutiques",
+        "ar": "حتى 3 محلات",
+        "en": "Up to 3 shops"
+      },
+      "p3_2": {
+        "fr": "Équipe dans chaque boutique",
+        "ar": "فريق في كل محل",
+        "en": "A team in every shop"
+      },
+      "n1_t": {
+        "fr": "Licence à vie",
+        "ar": "رخصة مدى الحياة",
+        "en": "Lifetime licence"
+      },
+      "n1_p": {
+        "fr": "Payez une fois, à partir de 2 900 MAD, première année comprise (installation, formation, hébergement). Ensuite un service annuel à partir de 600 MAD.",
+        "ar": "ادفع مرة واحدة، ابتداءً من 2 900 درهم، مع السنة الأولى (التثبيت، التكوين، الاستضافة). بعدها خدمة سنوية ابتداءً من 600 درهم.",
+        "en": "Pay once, from 2,900 MAD, first year included (setup, training, hosting). Then a yearly service from 600 MAD."
+      },
+      "n2_t": {
+        "fr": "Paiement simple",
+        "ar": "دفع بسيط",
+        "en": "Easy payment"
+      },
+      "n2_p": {
+        "fr": "Virement, CashPlus ou espèces. Si un paiement manque, vos données passent en lecture seule. Elles ne sont jamais supprimées.",
+        "ar": "تحويل بنكي أو كاش بلوس أو نقدًا. إذا تأخر الدفع، تصبح بياناتك للقراءة فقط. لا تُحذف أبدًا.",
+        "en": "Bank transfer, CashPlus or cash. If a payment is missed, your data becomes read-only. It is never deleted."
+      }
+    },
+    "faq": {
+      "faq_eyebrow": {
+        "fr": "Questions",
+        "ar": "أسئلة",
+        "en": "FAQ"
+      },
+      "faq_title": {
+        "fr": "Ce que les boutiques nous demandent",
+        "ar": "ما تسألنا عنه المحلات",
+        "en": "What shops ask us"
+      },
+      "q1": {
+        "fr": "Faut-il installer quelque chose ?",
+        "ar": "هل يجب تثبيت شيء؟",
+        "en": "Do I need to install anything?"
+      },
+      "a1": {
+        "fr": "Non. Okaisse s'ouvre dans le navigateur de votre ordinateur ou de votre téléphone. Sur le téléphone, vous pouvez l'ajouter à l'écran d'accueil comme une appli.",
+        "ar": "لا. يفتح Okaisse في متصفح حاسوبك أو هاتفك. على الهاتف يمكنك إضافته إلى الشاشة الرئيسية كتطبيق.",
+        "en": "No. Okaisse opens in the browser on your computer or phone. On the phone you can add it to the home screen like an app."
+      },
+      "q2": {
+        "fr": "Mes données sont-elles protégées ?",
+        "ar": "هل بياناتي محمية؟",
+        "en": "Is my data safe?"
+      },
+      "a2": {
+        "fr": "Chaque boutique a ses propres données, que personne d'autre ne voit. Une sauvegarde complète est faite chaque jour, et vous pouvez télécharger votre copie à tout moment.",
+        "ar": "لكل محل بياناته الخاصة التي لا يراها أحد غيره. تُنجز نسخة احتياطية كاملة كل يوم، ويمكنك تنزيل نسختك في أي وقت.",
+        "en": "Each shop has its own data that nobody else sees. A full backup is made every day, and you can download your copy at any time."
+      },
+      "q3": {
+        "fr": "Mes employés voient-ils mes marges ?",
+        "ar": "هل يرى موظفيّ أرباحي؟",
+        "en": "Can my staff see my margins?"
+      },
+      "a3": {
+        "fr": "Non. Les comptes employés ne reçoivent jamais les prix d'achat ni le bénéfice. Ce n'est pas seulement caché à l'écran, le serveur ne les envoie pas.",
+        "ar": "لا. حسابات الموظفين لا تستقبل أبدًا ثمن الشراء ولا الربح. ليس مجرد إخفاء على الشاشة، الخادم لا يرسلها.",
+        "en": "No. Staff accounts never receive purchase prices or profit. It isn't just hidden on screen: the server doesn't send them."
+      },
+      "q4": {
+        "fr": "Puis-je scanner l'IMEI sans lecteur ?",
+        "ar": "هل يمكنني مسح IMEI بدون قارئ؟",
+        "en": "Can I scan the IMEI without a scanner?"
+      },
+      "a4": {
+        "fr": "Oui, avec la caméra du téléphone : code-barres de la boîte ou écran *#06#. Un lecteur USB marche aussi sur l'ordinateur.",
+        "ar": "نعم، بكاميرا الهاتف: الرمز الشريطي للعلبة أو شاشة ‎*#06#‎. ويعمل قارئ USB أيضًا على الحاسوب.",
+        "en": "Yes, with the phone camera: the barcode on the box or the *#06# screen. A USB scanner works on the computer too."
+      },
+      "q5": {
+        "fr": "Et si j'arrête de payer ?",
+        "ar": "وإذا توقفت عن الدفع؟",
+        "en": "What if I stop paying?"
+      },
+      "a5": {
+        "fr": "Votre compte passe en lecture seule : vous voyez et exportez tout, mais n'ajoutez plus rien. Rien n'est jamais supprimé.",
+        "ar": "يصبح حسابك للقراءة فقط: ترى كل شيء وتصدّره، لكن لا تضيف شيئًا جديدًا. لا يُحذف أي شيء أبدًا.",
+        "en": "Your account becomes read-only: you can see and export everything, but not add anything new. Nothing is ever deleted."
+      }
+    },
+    "contact": {
+      "c_eyebrow": {
+        "fr": "Contact",
+        "ar": "اتصل بنا",
+        "en": "Contact"
+      },
+      "c_title": {
+        "fr": "Voyons Okaisse dans votre boutique",
+        "ar": "لنرَ Okaisse في محلك",
+        "en": "Let's see Okaisse in your shop"
+      },
+      "c_lead": {
+        "fr": "Envoyez-nous un message sur WhatsApp. On vous montre l'appli en 10 minutes et on ouvre votre essai gratuit.",
+        "ar": "أرسل لنا رسالة على واتساب. نعرض لك التطبيق في 10 دقائق ونفتح تجربتك المجانية.",
+        "en": "Send us a WhatsApp message. We'll show you the app in 10 minutes and open your free trial."
+      },
+      "c_btn": {
+        "fr": "Écrire sur WhatsApp",
+        "ar": "راسلنا على واتساب",
+        "en": "Message us on WhatsApp"
+      },
+      "c_small": {
+        "fr": "Lundi à samedi, 9 h à 19 h",
+        "ar": "من الإثنين إلى السبت، 9 صباحًا إلى 7 مساءً",
+        "en": "Monday to Saturday, 9 am to 7 pm"
+      },
+      "wa_msg": {
+        "fr": "Bonjour, je voudrais essayer Okaisse pour ma boutique.",
+        "ar": "السلام عليكم، أريد تجربة Okaisse لمحلي.",
+        "en": "Hello, I'd like to try Okaisse for my shop."
+      },
+      "wa_plan": {
+        "fr": "Offre : ",
+        "ar": "العرض: ",
+        "en": "Plan: "
+      },
+      "foot": {
+        "fr": "© 2026 Okaisse · La caisse des boutiques de téléphones d'occasion",
+        "ar": "© 2026 Okaisse · صندوق محلات الهواتف المستعملة",
+        "en": "© 2026 Okaisse · The till for used-phone shops"
+      }
+    }
   }
 }
