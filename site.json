@@ -5,16 +5,16 @@
   "image": "images/app-screen.jpg",
   "prix": {
     "solo": {
-      "mois": "149",
-      "an": "1 490"
+      "mois": "199",
+      "an": "1 990"
     },
     "boutique": {
-      "mois": "249",
-      "an": "2 490"
+      "mois": "299",
+      "an": "2 990"
     },
     "multi": {
-      "mois": "449",
-      "an": "4 490"
+      "mois": "499",
+      "an": "4 990"
     }
   },
   "textes": {
@@ -527,9 +527,9 @@
         "en": "Lifetime licence"
       },
       "n1_p": {
-        "fr": "Payez une fois dès 2 900 MAD, puis un service annuel dès 600 MAD.",
-        "ar": "ادفع مرة واحدة ابتداءً من 2 900 درهم، ثم خدمة سنوية من 600 درهم.",
-        "en": "Pay once from 2,900 MAD, then a yearly service from 600 MAD."
+        "fr": "Payez une fois dès 3 900 MAD, puis un service annuel dès 900 MAD.",
+        "ar": "ادفع مرة واحدة ابتداءً من 3 900 درهم، ثم خدمة سنوية من 900 درهم.",
+        "en": "Pay once from 3,900 MAD, then a yearly service from 900 MAD."
       },
       "n2_t": {
         "fr": "Paiement simple",
