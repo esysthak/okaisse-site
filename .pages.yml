@@ -33,19 +33,19 @@ content:
         type: object
         fields:
           - name: solo
-            label: Solo
+            label: Essentiel
             type: object
             fields:
               - { name: mois, label: Par mois, type: string }
               - { name: an, label: Par an, type: string }
           - name: boutique
-            label: Boutique
+            label: Pro
             type: object
             fields:
               - { name: mois, label: Par mois, type: string }
               - { name: an, label: Par an, type: string }
           - name: multi
-            label: Multi-boutique
+            label: Multi
             type: object
             fields:
               - { name: mois, label: Par mois, type: string }
@@ -684,15 +684,29 @@ content:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
+              - name: p1_name
+                label: "Essentiel : nom"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
               - name: p1_for
-                label: "Solo : pour qui"
+                label: "Essentiel : pour qui"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p1_1
-                label: "Solo : point 1"
+                label: "Essentiel : point 1"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p1_2
+                label: "Essentiel : point 2"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
@@ -726,43 +740,57 @@ content:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
+              - name: p2_name
+                label: "Pro : nom"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
               - name: p2_for
-                label: "Boutique : pour qui"
+                label: "Pro : pour qui"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p2_1
-                label: "Boutique : point 1"
+                label: "Pro : point 1"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p2_2
-                label: "Boutique : point 2"
+                label: "Pro : point 2"
+                type: object
+                fields:
+                  - { name: fr, label: Français, type: string }
+                  - { name: ar, label: Arabe, type: string }
+                  - { name: en, label: Anglais, type: string }
+              - name: p3_name
+                label: "Multi : nom"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p3_for
-                label: "Multi-boutique : pour qui"
+                label: "Multi : pour qui"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p3_1
-                label: "Multi-boutique : point 1"
+                label: "Multi : point 1"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
                   - { name: ar, label: Arabe, type: string }
                   - { name: en, label: Anglais, type: string }
               - name: p3_2
-                label: "Multi-boutique : point 2"
+                label: "Multi : point 2"
                 type: object
                 fields:
                   - { name: fr, label: Français, type: string }
