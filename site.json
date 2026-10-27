@@ -9,12 +9,12 @@
       "an": "1 990"
     },
     "boutique": {
-      "mois": "299",
-      "an": "2 990"
+      "mois": "349",
+      "an": "3 490"
     },
     "multi": {
-      "mois": "499",
-      "an": "4 990"
+      "mois": "599",
+      "an": "5 990"
     }
   },
   "textes": {
@@ -461,15 +461,25 @@
         "ar": "درهم / سنة",
         "en": "MAD / year"
       },
+      "p1_name": {
+        "fr": "Essentiel",
+        "ar": "أساسي",
+        "en": "Essential"
+      },
       "p1_for": {
-        "fr": "Le vendeur seul dans sa boutique.",
-        "ar": "البائع وحده في محله.",
-        "en": "The seller running the shop alone."
+        "fr": "Pour acheter et vendre des téléphones d'occasion.",
+        "ar": "لشراء وبيع الهواتف المستعملة.",
+        "en": "To buy and sell used phones."
       },
       "p1_1": {
-        "fr": "1 boutique, 1 compte",
-        "ar": "محل واحد، حساب واحد",
-        "en": "1 shop, 1 account"
+        "fr": "Propriétaire + 1 vendeur",
+        "ar": "المالك + بائع واحد",
+        "en": "Owner + 1 seller"
+      },
+      "p1_2": {
+        "fr": "Options au choix : +100 MAD chacune",
+        "ar": "خيارات إضافية: +100 درهم لكل واحد",
+        "en": "Add-ons: +100 MAD each"
       },
       "p_all": {
         "fr": "Stock, IMEI, factures, WhatsApp",
@@ -491,35 +501,45 @@
         "ar": "الأكثر اختيارًا",
         "en": "Most chosen"
       },
+      "p2_name": {
+        "fr": "Pro",
+        "ar": "Pro",
+        "en": "Pro"
+      },
       "p2_for": {
-        "fr": "Une boutique avec son équipe.",
-        "ar": "محل مع فريقه.",
-        "en": "A shop with its team."
+        "fr": "Toute la boutique dans une seule appli.",
+        "ar": "المحل كله في تطبيق واحد.",
+        "en": "The whole shop in one app."
       },
       "p2_1": {
-        "fr": "1 boutique, propriétaire + 3 employés",
-        "ar": "محل واحد، المالك + 3 موظفين",
-        "en": "1 shop, owner + 3 staff"
+        "fr": "Propriétaire + 3 employés",
+        "ar": "المالك + 3 موظفين",
+        "en": "Owner + 3 staff"
       },
       "p2_2": {
-        "fr": "Marges cachées aux employés",
-        "ar": "الأرباح مخفية عن الموظفين",
-        "en": "Margins hidden from staff"
+        "fr": "Caisse & Stock, Réparations, Clients & Crédit inclus",
+        "ar": "الصندوق والمخزون، الإصلاحات، الزبائن والكريدي مشمولة",
+        "en": "Till & Stock, Repairs, Clients & Credit included"
+      },
+      "p3_name": {
+        "fr": "Multi",
+        "ar": "Multi",
+        "en": "Multi"
       },
       "p3_for": {
-        "fr": "Plusieurs points de vente, une seule vue.",
-        "ar": "عدة نقاط بيع، ونظرة واحدة.",
-        "en": "Several shops, one view."
+        "fr": "Pour 2 ou 3 boutiques, un seul compte.",
+        "ar": "لمحلين أو ثلاثة، بحساب واحد.",
+        "en": "For 2 or 3 shops, one account."
       },
       "p3_1": {
-        "fr": "Jusqu'à 3 boutiques",
-        "ar": "حتى 3 محلات",
-        "en": "Up to 3 shops"
+        "fr": "Tout le Pro, jusqu'à 3 boutiques",
+        "ar": "كل مزايا Pro، حتى 3 محلات",
+        "en": "All of Pro, up to 3 shops"
       },
       "p3_2": {
-        "fr": "Équipe dans chaque boutique",
-        "ar": "فريق في كل محل",
-        "en": "A team in every shop"
+        "fr": "Propriétaire + 10 employés",
+        "ar": "المالك + 10 موظفين",
+        "en": "Owner + 10 staff"
       },
       "n1_t": {
         "fr": "Licence à vie",
